@@ -10,7 +10,7 @@ we tested this webapp with Chrome v65.0.3325.181 and Firefox v52.7.2.
 
 이 응용 프로그램은 Chrome v65.0.3325.181와 Firefox v52.7.2에서 동작 확인하고 있습니다.
 
-### Application modules and development / 依存モジュール
+### Application modules and development /의존 모듈
 see /package.json
 
 /package.json 에 따라 모듈을 확인하시기 바랍니다.
@@ -83,7 +83,7 @@ then setup application config for Peers, Orderers, CAs, MSP users and cert pathe
   //then your other orgs..
 ```
 
-## Register MSP Users / MSPへのユーザー登録
+## Register MSP Users / MSP 에 등록
 `node scripts/registerUser.js` on application root.
 
 응용 프로그램의 루트 디렉토리에서`node scripts / registerUser.js`하십시오.
