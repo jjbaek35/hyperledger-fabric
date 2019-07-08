@@ -5,29 +5,25 @@
 ### Hyperledger Fabric version
 v1.0.6
 
-### Browser / ブラウザ
+### Browser / 브라우저
 we tested this webapp with Chrome v65.0.3325.181 and Firefox v52.7.2.
 
-このアプリケーションはChrome v65.0.3325.181とFirefox v52.7.2で動作確認しています。
+이 응용 프로그램은 Chrome v65.0.3325.181와 Firefox v52.7.2에서 동작 확인하고 있습니다.
 
 ### Application modules and development / 依存モジュール
 see /package.json
 
-/package.jsonで依存モジュールをご確認ください。
+/package.json 에 따라 모듈을 확인하시기 바랍니다.
 
-## Install / インストール
+## Install / 설치
 `npm install` on application root
-
-アプリのルートディレクトリで`npm install`してください。
+응용 프로그램의 루트 디렉토리에서`npm install`하십시오.
 
 ## Fabric setup
 you need to set up your fabric Environment first.
 and install and instantiate CarTransfer chaincode.
 then setup application config for Peers, Orderers, CAs, MSP users and cert pathes info on /config/default.json .
 
-アプリの利用には接続先のFabric環境をセットアップする必要があります。
-そのうえでチェーンコードのインストールとインスタンス化を行ってください。接続先アプリケーションは書籍で提供するcartransferチェーンコードとなります。
-また、設定ファイル(/config/default.json)にPeers, Orderers, CAs, MSPユーザーや証明書のパスを設定します。
 앱 이용에 연결된 Fabric 환경을 설정해야합니다. 게다가 체인 코드 설치 및 인스턴스화를 수행하십시오. 연결된 응용 프로그램은 책에서 제공하는 cartransfer 체인 코드입니다. 또한 설정 파일 (/config/default.json)에 Peers, Orderers, CAs, MSP 사용자와 인증서의 경로를 설정합니다.
 
 ```
@@ -90,36 +86,35 @@ then setup application config for Peers, Orderers, CAs, MSP users and cert pathe
 ## Register MSP Users / MSPへのユーザー登録
 `node scripts/registerUser.js` on application root.
 
-アプリのルートディレクトリで`node scripts/registerUser.js`してください。
+응용 프로그램의 루트 디렉토리에서`node scripts / registerUser.js`하십시오.
 
 It'll be error if user is already registered.
 
-ただしユーザーが登録済の場合エラーとなりますが問題ありません。
+그러나 사용자가 등록 된 경우 오류가 발생하지만 문제 없습니다.
 
-## Deploy (Install/Instantiate/Update) Chaincode / チェーコードのデプロイ
+## Deploy (Install/Instantiate/Update) Chaincode 
 `node scripts/deploy.js` on application root.
-
-アプリのルートディレクトリで`node scripts/deploy.js`してください。
+응용 프로그램의 루트 디렉토리에서`node scripts / deploy.js`하십시오.
 
 you need to set up /config/default.json asset.chaincode property and consts on deploy.js for your installation target org and chaincode.
 
-デプロイにあたっては/config/default.jsonのasset.chaincodeプロパティの設定とscripts/deploy.jsのconsts値の設定でデプロイ対象のチェーンコードとOrganizationなどを指定します。
+배치에 있어서는 /config/default.json의 asset.chaincode 속성의 설정과 scripts / deploy.js의 consts 값 설정에서 배포 대상 체인 코드와 Organization 등을 지정합니다.
 
-## Add Owners for CarTransfer chaincode / オーナーの登録
+## Add Owners for CarTransfer chaincode 
 `node scripts/addOwners.js` on application root.
-アプリのルートディレクトリで`node scripts/addOwners.js`してください。
+응용 프로그램의 루트 디렉토리에서`node scripts / addOwners.js`하십시오.
 
 you need to add owners after deployment of CarTransfer chaincode.and this script add all MSP users as Owner.
 It'll be error if owner is already registered.
 
-CarTransferチェーンコードの利用にはこちらをつかってオーナー登録しておく必要があります。このスクリプトはregisterで登録したMSPユーザーをオーナーとして登録します。既にオーナーが登録済の場合エラーとなりますが問題ありません。
-またデプロイ直後のリクエストはエラーとなる可能性があります。再実行することで正常登録できます。
+CarTransfer 체인 코드의 이용은 이쪽을 사용하고 소유자 등록 해 둘 필요가 있습니다. 이 스크립트는 register에 등록 된 MSP 사용자를 소유자로 등록합니다. 이미 소유자가 등록 된 경우 오류가 발생하지만 문제 없습니다.
+또한 배포 직후의 요청 오류를 일으킬 수 있습니다. 다시 실행하면 정상적으로 등록 할 수 있습니다.
 
-## Build Application / アプリケーションのビルド
+## Build Application / 응용 프로그램 빌드
 `npm run build` on application root
 
-アプリのルートディレクトリで`npm run build`してください。
-事前にnode.jsとnpmのセットアップが必要です。
+응용 프로그램의 루트 디렉토리에서`npm run build`하십시오.
+사전에 node.js와 npm 설치가 필요합니다.
 
 ## Run Application
 `npm start`
@@ -128,13 +123,13 @@ you can access webapp with userid and password.
 default setting is on /config/default.json users and password property.
 (you should change the setting.)
 
-アプリケーションへのアクセスは基本認証がかけられています。
-/config/default.jsonのusersプロパティとpasswordプロパティが利用できます。
-(デフォルト設定は必要に応じて変更ください。)
+응용 프로그램에 대한 액세스는 기본 인증이 걸려 있습니다.
+/config/default.json의 users 속성 및 password 속성을 사용할 수 있습니다.
+(기본 설정은 필요에 따라 변경합니다.)
 
 ## Test fabric client code
 `npm run test:node`
 
 you need to setup config/default.json and use chaincode_example02 for test.
 
-テストの実行にはchaincode_example02のセットアップとconfig/default.jsonの環境設定が必要です。
+테스트 실행에 chaincode_example02 설치 및 config / default.json의 환경 설정이 필요합니다.
