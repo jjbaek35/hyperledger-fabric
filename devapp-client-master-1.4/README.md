@@ -28,6 +28,7 @@ then setup application config for Peers, Orderers, CAs, MSP users and cert pathe
 アプリの利用には接続先のFabric環境をセットアップする必要があります。
 そのうえでチェーンコードのインストールとインスタンス化を行ってください。接続先アプリケーションは書籍で提供するcartransferチェーンコードとなります。
 また、設定ファイル(/config/default.json)にPeers, Orderers, CAs, MSPユーザーや証明書のパスを設定します。
+앱 이용에 연결된 Fabric 환경을 설정해야합니다. 게다가 체인 코드 설치 및 인스턴스화를 수행하십시오. 연결된 응용 프로그램은 책에서 제공하는 cartransfer 체인 코드입니다. 또한 설정 파일 (/config/default.json)에 Peers, Orderers, CAs, MSP 사용자와 인증서의 경로를 설정합니다.
 
 ```
 "asset": {
