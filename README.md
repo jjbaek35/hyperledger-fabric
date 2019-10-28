@@ -1,4 +1,4 @@
-# 실행순서
+# execute order
 
 1.  
 devapp-client-master-1.4/fabric  
